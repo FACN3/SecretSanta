@@ -35,6 +35,4 @@ CREATE TABLE IF NOT EXISTS reservation (
 );
 
 
-
-
 COMMIT;
