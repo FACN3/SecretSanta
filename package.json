@@ -1,0 +1,25 @@
+{
+  "name": "SecretSanta",
+  "version": "1.0.0",
+  "description": "Surprise your friends by offering them their dream gift!",
+  "main": "index.js",
+  "dependencies": {
+    "env2": "^2.2.0",
+    "pg": "^7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN3/SecretSanta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN3/SecretSanta/issues"
+  },
+  "homepage": "https://github.com/FACN3/SecretSanta#readme"
+}
