@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tdd todo</title>
+    <link rel="stylesheet" href="./style.css">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Philosopher:700" rel="stylesheet">
+  </head>
+  <body class="background">
+    <header class="header">
+      <h1 class="header__title">The Amazing Organizer</h1>
+      <h2 class="header__tagline">Enter your tasks and submit them by priority order!</h2>
+    </header>
+    <div class="page">
+    <div id = "todo-container" class = "todosContainer">
+      <!---  <ul>
+      </ul> --->
+    </div>
+    <div class="form">
+    <form id="add-todo">
+      <div class="form__description">
+      <input class="form__description--input" type="text" name="description" placeholder="Type your todo here" onfocus="this.placeholder = ''">
+    </div>
+    <div class="form__buttons">
+      <select id="priority" class="form__buttons--submit">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" selected>Priority</option>
+      <input class="form__buttons--submit" type="submit" name="" value="Submit">
+    </div>
+    </form>
+  </div>
+  </div>
+  </body>
+  <script type="text/javascript" src = "./logic.js"></script>
+  <script type="text/javascript" src = "./dom.js"></script>
+</html>
