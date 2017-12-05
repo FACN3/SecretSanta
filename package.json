@@ -7,7 +7,10 @@
     "env2": "^2.2.0",
     "pg": "^7.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
