@@ -1,11 +1,13 @@
 const fs = require('fs');
   var sql;
 const dbConnection = require('./db_connection.js');
+
+let sql;
+
   if ((process.env.NODE_ENV = "test")) {
-     sql = fs.readFileSync(`${__dirname}/test_db_build.sql`).toString();
-    console.log('I passed here');
+    sql = fs.readFileSync(`${__dirname}/test_db_build.sql`).toString();
   } else {
-     sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
+    sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
   }
 
 const runDbBuild = cb => {
