@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS relationship (
 
 CREATE TABLE IF NOT EXISTS reservation (
   res_id SERIAL PRIMARY KEY,
-  gift_id INTEGER NOT NULL,
+  rela_id INTEGER NOT NULL,
   donor_id INTEGER NOT NULL
 );
 
