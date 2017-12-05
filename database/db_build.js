@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+  var sql;
 const dbConnection = require('./db_connection.js');
 
 let sql;
