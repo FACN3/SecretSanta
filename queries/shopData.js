@@ -1,6 +1,6 @@
 const databaseConnection = require('../database/db_connection.js');
 
-const shopData = (first_name, last_name,cb) => {
+const shopData = (first_name, last_name, cb) => {
   databaseConnection.query('SELECT user_id FROM users WHERE first_name=$1 AND last_name=$2',
    [first_name, last_name] ,
     (err, res)  => {
@@ -19,4 +19,4 @@ const shopData = (first_name, last_name,cb) => {
   });
 };
 
-module.exports = searchData;
+module.exports = shopData;
