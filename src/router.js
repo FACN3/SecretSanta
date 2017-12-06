@@ -1,6 +1,6 @@
-const handleHome = require('./handleHome');
-const handleWishlist = require('./handleWishlist');
-const handleStatic = require('./handleStatic');
+const handleHome = require('./handlers/handleHome');
+const handleWishlist = require('./handlers/handleWishlist');
+const handleStatic = require('./handlers/handleStatic');
 
 const router = (req, res) => {
   const url = req.url
