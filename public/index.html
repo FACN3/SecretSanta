@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" href="./styles.css"> -->
+  <title>Secret Santa App</title>
+</head>
+<body>
+  <section class='header'>
+    <div>
+      <h1 class='header__title'>Secret Santa For FACN3</h1>
+      <h2 class='header__tagline'>Surprise and be surprised!</h2>
+      <p class='header_intro'>Everyone likes to receive presents :) Secret Santa is a way to discreetly
+        suggest to your friends what you would like to receive for Christmas and gives you the opportunity to
+        know in turn what they would like to receive in case you are wondering what to give them.</p>
+    </div>
+  </section>
+  <section class='content'>
+    <div class='content--form'>
+      <h2 class='content--form__title'>Create Your Wishlist</h2>
+        <form class="content--form" method="post" action="/wishlist">
+          <input type="text" name="first_name" value="Name"></input>
+          <input type="text" name="last_name" value="Surname"></input>
+          <input type="text" name="wishlist" value="Wishlist"></input>
+          <button type="submit" name="submit" value="submit" id="wishlist">Submit</button>
+        </form>
+    </div>
+    <div class="content__buttons">
+      <p>See your firend's wishlist!</p>
+      <button type="submit" action="/search">Search</button>
+      <p>Generate your shopping list!</p>
+      <button type="submit" action="/generate">Shoping List</button>
+    </div>
+  </section>
+  <script type='text/javascript' scr='./js/index.js'></script>
+</body>
+</html>

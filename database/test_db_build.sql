@@ -11,14 +11,21 @@ CREATE TABLE IF NOT EXISTS users (
   last_name TEXT NOT NULL
 );
 
-INSERT INTO users (first_name, last_name) VALUES ('Mynah', 'Marie');
-INSERT INTO users (first_name, last_name) VALUES ('Hasan', 'Saad');
-INSERT INTO users (first_name, last_name) VALUES ('Sophie', 'Lim');
+INSERT INTO users (first_name, last_name) VALUES
+  ('Mynah', 'Marie'),
+  ('Hasan', 'Saad'),
+  ('Sophie', 'Lim');
 
 CREATE TABLE IF NOT EXISTS gifts (
   gift_id SERIAL PRIMARY KEY,
   item TEXT NOT NULL
 );
+
+INSERT INTO gifts (item) VALUES
+  ('plane ticket'),
+  ('chocolate'),
+  ('money'),
+  ('new car');
 
 CREATE TABLE IF NOT EXISTS relationship (
   rela_id SERIAL PRIMARY KEY,
@@ -27,12 +34,16 @@ CREATE TABLE IF NOT EXISTS relationship (
   reserved BOOLEAN DEFAULT FALSE
 );
 
+INSERT INTO relationship (user_id, gift_id) VALUES
+  (1, 1),
+  (2, 4),
+  (3, 2),
+  (3, 3);
 
 CREATE TABLE IF NOT EXISTS reservation (
   res_id SERIAL PRIMARY KEY,
   rela_id INTEGER NOT NULL,
   donor_id INTEGER NOT NULL
 );
-
 
 COMMIT;
