@@ -1,6 +1,6 @@
 /* INDEX */
 .body--index {
-  background-color: rgb(212, 36, 38);
+  background-color: rgb(77, 135, 122);
   text-align: center;
 }
 
@@ -8,11 +8,31 @@
   margin: 3% 10% 3% 10%;
 }
 
+.header__title {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 6.5em;
+  color: white;
+  margin: 0.5em;
+}
+
+.header__tagline {
+  font-family: 'Inconsolata', monospace;
+  font-size: 2.5em;
+  margin: 0.1em;
+}
+
+.header_intro {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2em;
+}
+
 .content {
-  background-color: rgb(10, 122, 60);
+  background-color: rgb(184, 73, 73);
   margin: 3% 10% 3% 10%;
   padding: 3% 0 3% 0;
   border-radius: 1.5rem;
+  font-family: 'Inconsolata', monospace;
+
 
 }
 
@@ -24,7 +44,7 @@ ul {
 
 /* GENERATE*/
 .body--generate {
-  background-color: rgb(212, 36, 38);
+  /*background-color: rgb(212, 36, 38);*/
   text-align: center;
 }
 
