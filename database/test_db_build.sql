@@ -20,9 +20,6 @@ CREATE TABLE IF NOT EXISTS gifts (
   item TEXT NOT NULL
 );
 
--- INSERT INTO gifts (item) VALUES ('Chocolate'),('iPhone'),('Cat'),('Car');
-
-
 CREATE TABLE IF NOT EXISTS relationship (
   rela_id SERIAL PRIMARY KEY,
   user_id INTEGER NOT NULL,
@@ -36,8 +33,6 @@ CREATE TABLE IF NOT EXISTS reservation (
   rela_id INTEGER NOT NULL,
   donor_id INTEGER NOT NULL
 );
-
-
 
 
 COMMIT;
