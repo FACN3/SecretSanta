@@ -26,7 +26,6 @@ const handleShopData = (req, res) => {
       } else {
         console.log('this is data', data);
 
-
         const first_name = data.split(',')[0];
         const last_name = data.split(',')[1];
         // console.log('fname ' + first_name + ' lname ' + last_name);

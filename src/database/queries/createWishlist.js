@@ -2,13 +2,12 @@ const dbConnect = require('../db_connection.js');
 
 // Takes 2 strings as first and last name, an array for the wishlist and a callback.
 const createWishlist = (first_name, last_name, wishlist, callback) => {
-  // console.log(1);
   dbConnect.query(
     'INSERT INTO users (first_name, last_name) SELECT $1, $2 WHERE NOT EXISTS (SELECT first_name, last_name FROM users WHERE first_name=$1 AND last_name=$2)',
     [first_name, last_name],
     (err, res) => {
       if (err) {
-        console.log(2, err);
+        return callback(err);
       }
       else {
         // console.log(3);
@@ -18,15 +17,12 @@ const createWishlist = (first_name, last_name, wishlist, callback) => {
           [first_name, last_name],
           (err, res) => {
             if (err) {
-              console.log(4, err);
               return callback(err);
             }
             else {
-              // console.log(5);
               user = JSON.stringify(res.rows[0].user_id);
 
               wishlist.forEach((item) => {
-                console.log(item);
                 const u = user; //Needed??
 
                 dbConnect.query(
@@ -34,7 +30,6 @@ const createWishlist = (first_name, last_name, wishlist, callback) => {
                   [item],
                   (err, res) => {
                     if (err) {
-                      console.log(6);
                       return callback(err);
                     }
                     else {
@@ -44,7 +39,6 @@ const createWishlist = (first_name, last_name, wishlist, callback) => {
                         [user, item],
                         (err, res) => {
                           if (err) {
-                            console.log(8);
                             return callback(err);
                           }
                           else {

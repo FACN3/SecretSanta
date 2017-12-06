@@ -4,7 +4,6 @@ const handleError = require('./handleError');
 
 const handleStatic = (req, res) => {
   const url = req.url;
-  console.log(url);
   const ext = req.url.split('.')[1];
   const types = {
     css: 'text/css',
