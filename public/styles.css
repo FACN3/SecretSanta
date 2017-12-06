@@ -1,6 +1,6 @@
 /* INDEX */
 .body--index {
-  background-color: red;
+  background-color: rgb(212, 36, 38);
   text-align: center;
 }
 
@@ -9,14 +9,26 @@
 }
 
 .content {
-  background-color: green;
+  background-color: rgb(10, 122, 60);
   margin: 3% 10% 3% 10%;
   padding: 3% 0 3% 0;
   border-radius: 1.5rem;
 
 }
 
+
 /* SEARCH */
 ul {
   list-style-type: none;
+}
+
+/* GENERATE*/
+.body--generate {
+  background-color: rgb(212, 36, 38);
+  text-align: center;
+}
+
+#first_name, #last_name {
+  height: 3em;
+  width: 15em;
 }
