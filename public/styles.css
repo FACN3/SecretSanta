@@ -1,3 +1,16 @@
 body {
   background-color: red;
+  text-align: center;
+}
+
+.header {
+  margin: 3% 10% 3% 10%;
+}
+
+.content {
+  background-color: green;
+  margin: 3% 10% 3% 10%;
+  padding: 3% 0 3% 0;
+  border-radius: 1.5rem;
+
 }
