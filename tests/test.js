@@ -1,13 +1,15 @@
 const tape = require('tape');
 const qs = require('querystring');
+const databaseConnection = require('../database/db_connection.js');
 const createWishlist = require('../queries/createWishlist');
 const shopData = require('../queries/shopData');
 const search = require('../queries/search');
+const reserveGifts = require('../queries/reserveGifts');
 const runDbBuild = require('../database/db_build');
 
 // Testing if tape is working
 tape("Is it working", (t) => {
-  t.equals(1,1, "one equals one");
+  t.equals(1, 1, "one equals one");
   t.end();
 });
 
@@ -57,4 +59,50 @@ tape("Returns a given user's wishlist", (t) => {
       }
     });
   });
+})
+
+//Testing reserving the gifts query
+tape('reserves the gifts a user chose and submitted', (t) => {
+  runDbBuild((err, res) => {
+    const expected = [{
+      'res_id': 1,
+      'rela_id': 1,
+      'donor_id': 2
+    }];
+    reserveGifts('Hasan', 'Saad', [1], (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        databaseConnection.query('SELECT * FROM reservation', (err, res) => {
+          if (err) {
+            console.log(err);
+          } else {
+            t.deepEqual(res.rows, expected, 'should add the new reservation');
+            t.end();
+          }
+        })
+      }
+    });
+
+  })
+})
+
+tape('change the reserved proporty for the gift to true when reserving it',(t)=>{
+  runDbBuild((err,res)=>{
+    const expected = true;
+    reserveGifts('Hasan', 'Saad', [1], (err) => {
+      if (err) {
+        console.log("HERE",err);
+      } else {
+        databaseConnection.query('SELECT reserved FROM relationship WHERE rela_id = 1', (err, res) => {
+          if (err) {
+            console.log(err);
+          } else {
+            t.deepEqual(res.rows[0]['reserved'], expected, 'should update resrved in the relationship for the gift to true');
+            t.end();
+          }
+        })
+      }
+    });
+  })
 })
