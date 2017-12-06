@@ -3,6 +3,7 @@ const handleWishlist = require('./handlers/handleWishlist');
 const handleSearch = require('./handlers/handleSearch');
 const handleStatic = require('./handlers/handleStatic');
 const handleShopData = require('./handlers/handleShopData');
+const handleReservation = require('./handlers/handleReservation');
 
 const router = (req, res) => {
   const url = req.url;
@@ -14,6 +15,8 @@ const router = (req, res) => {
     handleSearch(req, res);
   } else if (url.split('?')[0] === '/generate') {
     handleShopData(req, res);
+  } else if (url === '/reserve') {
+    handleReservation(req, res);
   } else {
     handleStatic(req, res);
   }
