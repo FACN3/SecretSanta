@@ -2,7 +2,7 @@ const fs = require('fs');
 const qs = require('querystring');
 const path = require('path');
 const handleError = require('./handleError');
-const createWishlist = require('../../queries/createWishlist');
+const createWishlist = require('../database/queries/createWishlist');
 
 const handleWishlist = (req, res) => {
   if (req.method === 'POST') {

@@ -1,4 +1,4 @@
-const databaseConnection = require('../database/db_connection.js');
+const databaseConnection = require('../db_connection.js');
 
 const searchUser = (firstName, lastName, cb) => {
 

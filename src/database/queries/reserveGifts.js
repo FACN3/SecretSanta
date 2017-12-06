@@ -1,4 +1,4 @@
-const databaseConnection = require('../database/db_connection.js');
+const databaseConnection = require('../db_connection.js');
 
 const reserveGifts = (first_name, last_name, arr, cb) => {
   databaseConnection.query('SELECT user_id FROM users WHERE first_name=$1 AND last_name=$2', [first_name, last_name],
