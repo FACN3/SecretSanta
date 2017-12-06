@@ -1,8 +1,6 @@
 const databaseConnection = require('../db_connection.js');
 
 const shopData = (first_name, last_name, cb) => {
-  console.log('firstname', first_name);
-  console.log('lastname', last_name);
   databaseConnection.query('SELECT user_id FROM users WHERE first_name=$1 AND last_name=$2', [first_name, last_name],
     (err, res) => {
       if (err) {

@@ -38,8 +38,19 @@
 
 
 /* SEARCH */
-ul {
-  list-style-type: none;
+
+label {
+  display: block;
+}
+
+.body__search {
+  text-align: center;
+}
+
+.div--result {
+  margin: 0 20% 0 45%;
+  padding: 3% 0 3% 0;
+  text-align: left;
 }
 
 /* GENERATE*/
