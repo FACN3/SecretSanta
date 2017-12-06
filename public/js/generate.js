@@ -1,5 +1,3 @@
-
-
 function fetch(url, data, callback) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
@@ -25,7 +23,7 @@ document.getElementById('generate').addEventListener('click', function (event) {
       console.log('there was an error', err);
     } else {
       console.log('response',res);
-      alert('information sent');
+      // alert('information sent');
     }
   });
 });
