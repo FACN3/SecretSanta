@@ -4,6 +4,7 @@ const handleError = require('./handleError');
 
 const handleStatic = (req, res) => {
   const url = req.url;
+  console.log(url);
   const ext = req.url.split('.')[1];
   const types = {
     css: 'text/css',
@@ -13,7 +14,7 @@ const handleStatic = (req, res) => {
   }[ext];
 
   const filePath = path.join(__dirname, '..', '..', 'public', url);
-  
+
   fs.readFile(filePath, (err, file) => {
     if (err) {
       handleError(err, req, res);
