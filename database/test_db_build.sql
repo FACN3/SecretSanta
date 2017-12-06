@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS relationship (
   reserved BOOLEAN DEFAULT FALSE
 );
 
+INSERT INTO relationship (user_id,gift_id) VALUES(3,2);
 
 CREATE TABLE IF NOT EXISTS reservation (
   res_id SERIAL PRIMARY KEY,
