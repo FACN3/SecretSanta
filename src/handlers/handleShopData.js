@@ -39,9 +39,9 @@ const handleShopData = (req, res) => {
               res.writeHead(200, {'content-type' : 'application/json'});
               res.end(JSON.stringify('USER NOT FOUND'));
             } else {
-            console.log(response.rows);
+            console.log('response here!!!', response);
             res.writeHead(200, {'content-type' : 'application/json'});
-            res.end(null, JSON.stringify(response.rows));
+            res.end(JSON.stringify(response.rows));
           }
           }
         });

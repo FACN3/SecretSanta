@@ -2,6 +2,7 @@ function fetch(url, data, callback) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log(xhr.responseText);
       callback(null, JSON.parse(xhr.responseText));
     } else if (xhr.readyState === 4 && xhr.status !== 200){
       callback(xhr.status);
@@ -23,8 +24,18 @@ document.getElementById('generate').addEventListener('click', function () {
     if(err) {
       console.log('there was an error', err);
     } else {
-      console.log('response',res);
-      // alert('information sent');
+      console.log('THE response', res);
+      showShoppingList(res);
     }
   });
 });
+
+function showShoppingList(arr) {
+    var shopList = document.createElement('ul');
+    arr.forEach(function(item){
+      var listElement = document.createElement('li');
+      listElement.textContent = item.item;
+      shopList.appendChild(listElement);
+    });
+    document.getElementById('shopping_list').appendChild(shopList);
+  }
