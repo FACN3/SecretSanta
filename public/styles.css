@@ -1,3 +1,8 @@
+p {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.5rem;
+}
+
 /* INDEX */
 .body--index {
   background-color: rgb(77, 135, 122);
@@ -50,7 +55,6 @@
   font-size: 0.7em;
 }
 
-
 /* SEARCH */
 
 label {
@@ -58,19 +62,30 @@ label {
 }
 
 .body__search {
+  background-color: rgb(77, 135, 122);
   text-align: center;
 }
 
+.body__search__title {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 4.5em;
+}
+
 .div--result {
-  margin: 0 20% 0 45%;
+  margin: 0 30% 0 30%;
   padding: 3% 0 3% 0;
-  text-align: left;
+  text-align: center;
 }
 
 /* GENERATE*/
 .body--generate {
-  /*background-color: rgb(212, 36, 38);*/
+  background-color: rgb(184, 73, 73);
   text-align: center;
+}
+
+.generate__title {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 4.5em;
 }
 
 #first_name, #last_name {
