@@ -12,15 +12,8 @@ const handleStatic = (req, res) => {
     ico: 'image/x-icon'
   }[ext];
 
-  let filePath;
-  if (ext === 'js') {
-    filePath = path.join(__dirname, '..', '..', 'public', url);
-  } else if (ext === 'ico'){
-    filePath = path.join(__dirname, '..', '..', 'public', 'assets', url);
-  } else {
-    filePath = path.join(__dirname, '..', '..', 'public', url);
-  }
-
+  const filePath = path.join(__dirname, '..', '..', 'public', url);
+  
   fs.readFile(filePath, (err, file) => {
     if (err) {
       handleError(err, req, res);
