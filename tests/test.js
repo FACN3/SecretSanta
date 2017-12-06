@@ -17,7 +17,7 @@ tape("Is it working", (t) => {
 tape("Inserting a new user with a wish list (all new items)", (t) => {
   runDbBuild((err, res) => {
     const expected = 'New wishlist created.';
-    createWishlist('Daniel', 'Doodle', ['money', 'new car', 'plane ticket'], (err, res) => {
+    createWishlist('Daniel', 'Doodle', ['poney', 'TV'], (err, res) => {
       if (err) {
         console.log(err);
       } else {
@@ -46,16 +46,15 @@ tape("Returns the shopping list of a given user.", (t) => {
   });
 });
 
-
 // Testing search for a user and see his wishlist.
 tape("Returns a given user's wishlist", (t) => {
   runDbBuild((err, res) => {
-    const expected = [];
+    const expected = 'plane ticket';
     search('Mynah', 'Marie', (err, res) => {
       if (err) {
         console.log(err);
       } else {
-        t.deepEqual(res, expected, "Should return an array representing a wishlist.");
+        t.deepEqual(res[0].gifts, expected, "Should return an array representing a wishlist.");
         t.end();
       }
     });
