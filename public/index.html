@@ -19,6 +19,7 @@
     <div class='content--form'>
       <h2 class='content--form__title'>Create Your Wishlist</h2>
         <form class="content--form" method="post" action="/wishlist">
+          <p>Insert your first name, last name and a list of gifs you wish to receive separated by commas.</p>
           <input type="text" name="first_name" value="Name"></input>
           <input type="text" name="last_name" value="Surname"></input>
           <input type="text" name="wishlist" value="Wishlist"></input>
@@ -26,10 +27,14 @@
         </form>
     </div>
     <div class="content__buttons">
-      <p>See your firend's wishlist!</p>
-      <button type="submit" action="/search">Search</button>
+      <form action="/search">
+      <p>See your friend's wishlist!</p>
+      <button type="submit" name="submit" value="submit">Search</button>
+    </form>
+    <form action="/generate">
       <p>Generate your shopping list!</p>
       <button type="submit" action="/generate">Shoping List</button>
+    </form>
     </div>
   </section>
   <script type='text/javascript' scr='./js/index.js'></script>
