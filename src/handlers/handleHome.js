@@ -4,7 +4,7 @@ const path = require('path');
 const handleError = require('./handleError');
 
 const handleHome = (req, res) => {
-  const filePath = path.join(__dirname, '..', 'public', 'index.html');
+  const filePath = path.join(__dirname, '..', '..', 'public', 'index.html');
 
   fs.readFile(filePath, (err, file) => {
     if (err) {

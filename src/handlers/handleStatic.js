@@ -14,11 +14,11 @@ const handleStatic = (req, res) => {
 
   let filePath;
   if (ext === 'js') {
-    filePath = path.join(__dirname, '..', 'public', 'js', url);
+    filePath = path.join(__dirname, '..', '..', 'public', 'js', url);
   } else if (ext === 'ico'){
-    filePath = path.join(__dirname, '..', 'public', 'assets', url);
+    filePath = path.join(__dirname, '..', '..', 'public', 'assets', url);
   } else {
-    filePath = path.join(__dirname, '..', 'public', url);
+    filePath = path.join(__dirname, '..', '..', 'public', url);
   }
 
   fs.readFile(filePath, (err, file) => {
@@ -31,6 +31,4 @@ const handleStatic = (req, res) => {
   })
 }
 
-
 module.exports = handleStatic;
-

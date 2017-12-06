@@ -1,10 +1,10 @@
 const tape = require('tape');
 const qs = require('querystring');
 const databaseConnection = require('../database/db_connection.js');
-const createWishlist = require('../queries/createWishlist');
-const shopData = require('../queries/shopData');
-const search = require('../queries/search');
-const reserveGifts = require('../queries/reserveGifts');
+const createWishlist = require('../database/queries/createWishlist');
+const shopData = require('../database/queries/shopData');
+const search = require('../database/queries/search');
+const reserveGifts = require('../database/queries/reserveGifts');
 const runDbBuild = require('../database/db_build');
 
 // Testing if tape is working
