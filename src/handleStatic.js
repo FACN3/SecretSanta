@@ -31,4 +31,6 @@ const handleStatic = (req, res) => {
   })
 }
 
+
 module.exports = handleStatic;
+
