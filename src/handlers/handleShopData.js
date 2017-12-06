@@ -24,21 +24,26 @@ const handleShopData = (req, res) => {
       if (err) {
         console.log('there is an error!', err);
       } else {
-        // console.log('this is data', data);
-        data = qs.parse(data);
-        // console.log('this is parsed data', data);
+        console.log('this is data', data);
 
-        const first_name = data['first_name'];
-        const last_name = data['last_name'];
+
+        const first_name = data.split(',')[0];
+        const last_name = data.split(',')[1];
         // console.log('fname ' + first_name + ' lname ' + last_name);
         shopData(first_name, last_name, (err, response) => {
           if(err) {
             // handleError(err, req, response);
             console.log(err);
           } else {
+            console.log(response);
+            if(response == 'USER NOT FOUND'){
+              res.writeHead(200, {'content-type' : 'application/json'});
+              res.end(JSON.stringify('USER NOT FOUND'));
+            } else {
             console.log(response.rows);
-            res.writeHead(200, {'content-type' : 'text/plain'});
-            res.end(null, response.rows);
+            res.writeHead(200, {'content-type' : 'application/json'});
+            res.end(null, JSON.stringify(response.rows));
+          }
           }
         });
       }
