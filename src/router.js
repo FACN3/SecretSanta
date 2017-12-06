@@ -1,5 +1,6 @@
 const handleHome = require('./handleHome');
 const handleWishlist = require('./handleWishlist');
+const handleStatic = require('./handleStatic');
 
 const router = (req, res) => {
   const url = req.url
@@ -11,9 +12,9 @@ const router = (req, res) => {
     handleSearch(req, res);
   } else if (url === '/generate') {
     handleShopData(req, res);
-  } //else {
-  //   handleStatic(req, res);
-  // }
+  } else {
+    handleStatic(req, res);
+  }
 }
 
 module.exports = router;

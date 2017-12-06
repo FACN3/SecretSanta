@@ -15,6 +15,8 @@ const handleStatic = (req, res) => {
   let filePath;
   if (ext === 'js') {
     filePath = path.join(__dirname, '..', 'public', 'js', url);
+  } else if (ext === 'ico'){
+    filePath = path.join(__dirname, '..', 'public', 'assets', url);
   } else {
     filePath = path.join(__dirname, '..', 'public', url);
   }
@@ -28,3 +30,7 @@ const handleStatic = (req, res) => {
     }
   })
 }
+
+
+module.exports = handleStatic;
+
