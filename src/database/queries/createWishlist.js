@@ -1,4 +1,4 @@
-const dbConnect = require('../database/db_connection.js');
+const dbConnect = require('../db_connection.js');
 
 // Takes 2 strings as first and last name, an array for the wishlist and a callback.
 const createWishlist = (first_name, last_name, wishlist, callback) => {
