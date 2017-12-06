@@ -5,9 +5,9 @@ Secret Santa lets you record a wishlist, view your friend's wishlist and select 
 
 ## Contributors
 
-Hasan Saad
-Sophia Lim
-Mynah Marie
+* Hasan Saad
+* Sophia Lim
+* Mynah Marie
 
 ## Design
 
@@ -24,35 +24,39 @@ On the generate.html page, a user that has reserved a series of items to buy for
 Our database contains 4 tables.
 
 Users:
+```
 ___________________________________
 | user_id | first_name | last_name |
 -----------------------------------|
 |  INTEGER |    TXT    |     TXT   |
 |_(primary)________________________|
-
+```
 Gifts:
+```
 __________________
 | gift_id | item |
 -----------------
 | INTEGER |  TXT |
 |_(primary)______|
-
+```
 Relationship:
+```
 ________________________________________
 |rela_id | user_id | gift_id | reserved |
 ---------+---------+---------+----------
 |INTEGER |FOREIGN  |FOREIGN  |  BOOL    |
 |(primary|_________|_________|__________|
-
+```
 The relationship table illustrates which user asked for which item.
 
 Reservation:
+```
 _____________________________
 |res_id | rela_id | donor_id |
 --------+---------+----------
 |INTEGER| FOREIGN |FOREIGN   |
 |(primary)________|__________|
-
+```
 The reservation table records every promise of a user who decided to buy gifts for his friends.
 
 
