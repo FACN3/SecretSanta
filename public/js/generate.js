@@ -1,5 +1,3 @@
-
-
 function fetch(url, data, callback) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {

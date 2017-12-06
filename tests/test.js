@@ -3,7 +3,7 @@ const qs = require('querystring');
 const databaseConnection = require('../src/database/db_connection.js');
 const createWishlist = require('../src/database/queries/createWishlist');
 const shopData = require('../src/database/queries/shopData');
-const search = require('../src/database/queries/search');
+const searchUser = require('../src/database/queries/searchUser');
 const reserveGifts = require('../src/database/queries/reserveGifts');
 const runDbBuild = require('../src/database/db_build');
 
@@ -50,7 +50,7 @@ tape("Returns the shopping list of a given user.", (t) => {
 tape("Returns a given user's wishlist", (t) => {
   runDbBuild((err, res) => {
     const expected = 'plane ticket';
-    search('Mynah', 'Marie', (err, res) => {
+    searchUser('Mynah', 'Marie', (err, res) => {
       if (err) {
         console.log(err);
       } else {

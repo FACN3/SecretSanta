@@ -9,13 +9,29 @@ function renderingSearchResult(err, arr) {
   if (err) {
     console.log('sorry having a problem with finding what you searched for');
   } else {
-    var resList = document.createElement('ul');
+    // var resList = document.createElement('ul');
+    var idx = 1;
+    document.getElementById('resDiv').innerHTML = '';
     arr.forEach(function(gift) {
-      var el = document.createElement('li');
-      el.textContent = gift.gifts;
-      resList.appendChild(el);
+      // var el = document.createElement('li');
+      if (gift.gifts !== "") {
+        var label = document.createElement('label');
+        var checkbox = document.createElement('input');
+        var description = document.createTextNode(gift.gifts);
+        checkbox.type = 'checkbox';
+        checkbox.name = 'gift' + idx.toString();
+        checkbox.value = gift.gifts;
+        // el.textContent = gift.gifts;
+        // resList.appendChild(el);
+        // resList.appendChild(checkbox);
+        label.appendChild(checkbox);
+        label.appendChild(description);
+        document.getElementById('resDiv').appendChild(label);
+        idx++;
+      }
     });
-    document.getElementById('resDiv').appendChild(resList);
+    // document.getElementById('resDiv').appendChild(resList);
+
   }
 }
 
