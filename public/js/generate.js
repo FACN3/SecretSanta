@@ -15,7 +15,7 @@ function fetch(url, data, callback) {
   xhr.send(data);
 }
 
-document.getElementById('generate').addEventListener('click', function () {
+document.getElementById('generate_button').addEventListener('click', function () {
   var first_name = document.getElementById('first_name').value.toLowerCase();
   var last_name = document.getElementById('last_name').value.toLowerCase();
   var data = [first_name, last_name];
