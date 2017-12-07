@@ -11,6 +11,13 @@ if (process.env.NODE_ENV === "test") {
 if (!DB_URL)
   throw new Error("Enviroment variable DB_URL must be set");
 
+const pool = new Pool({
+  connectionString: DB_URL
+});
+
+//
+//
+// module.exports = pool;
 
 const params = url.parse(DB_URL);
 const [username, password] = params.auth.split(':');
@@ -24,6 +31,6 @@ const options = {
   password: password
 };
 
-options.ssl = options.host !== 'localhost';
 
+options.ssl = options.host !== 'localhost';
 module.exports = new Pool(options);
