@@ -4,6 +4,7 @@ p {
 }
 
 /* INDEX */
+
 .body--index {
   background-color: rgb(77, 135, 122);
   text-align: center;
@@ -46,7 +47,7 @@ p {
 
 .content--form__title {
   font-size: 2em;
-  margin-top : 0.02em;
+  margin-top: 0.02em;
 }
 
 #search, #list {
@@ -64,6 +65,9 @@ label {
 .body__search {
   background-color: rgb(77, 135, 122);
   text-align: center;
+  /*background-image: url('https://thumbs.gfycat.com/OldSkinnyHornedviper-small.gif');*/
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .body__search__title {
@@ -72,12 +76,24 @@ label {
 }
 
 .div--result {
-  margin: 0 30% 0 30%;
+  margin: 0 30% 0 12%;
+  width: 80%;
   padding: 3% 0 3% 0;
-  text-align: center;
+  background-image: url('http://www.pngmart.com/files/1/Wedding-Border-PNG-File.png');
+  background-size: cover;
+}
+
+#results {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding-left: 15%;
+  padding-top: 10%;
 }
 
 /* GENERATE*/
+
 .body--generate {
   background-color: rgb(184, 73, 73);
   text-align: center;
@@ -91,4 +107,20 @@ label {
 #first_name, #last_name {
   height: 3em;
   width: 15em;
+}
+
+label {
+  font-family: OCR A Std, monospace;
+}
+
+.button--reserve {
+  align-self: center;
+}
+
+.input--donor {
+  width: 85%;
+}
+
+.checkbox--gifts {
+  border-radius: 4px;
 }
