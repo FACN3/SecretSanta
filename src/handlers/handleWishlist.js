@@ -14,8 +14,8 @@ const handleWishlist = (req, res) => {
       if (err) {
         handleError(err, req, res);
       } else {
-        data = qs.parse(data);
 
+        data = qs.parse(data);
         // Send to database
         const firstName = data.first_name.toLowerCase();
         const lastName = data.last_name.toLowerCase();
