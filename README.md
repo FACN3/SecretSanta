@@ -62,7 +62,6 @@ The reservation table records every promise of a user who decided to buy gifts f
 ## To View Our App
 
 * Clone this repository
-* Add our config.env file
 * Run ```npm install``` to install the dependencies
 * Run ```npm run dev``` to start nodemon on port 4444.
 
