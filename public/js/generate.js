@@ -35,6 +35,7 @@ document.getElementById('generate_button').addEventListener('click', function ()
 });
 
 function showShoppingList(arr) {
+  document.getElementById('shopping_list').innerHTML = "";
     var shopList = document.createElement('ul');
     arr.forEach(function(item){
       var listElement = document.createElement('li');
