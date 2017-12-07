@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <title>Secret Santa App</title>
 </head>
@@ -25,9 +26,9 @@
       <h2 class='content--form__title'>Create Your Wishlist</h2>
         <form class="content--form" method="post" action="/wishlist">
           <p>Insert your first name, last name and a list of gifs you wish to receive<br> separated by commas.</p>
-          <input type="text" name="first_name" placeholder="Name"></input>
-          <input type="text" name="last_name" placeholder="Surname"></input>
-          <input type="text" name="wishlist" placeholder="Wishlist"></input>
+          <input type="text" name="first_name" placeholder="Name" required></input>
+          <input type="text" name="last_name" placeholder="Surname" required></input>
+          <input type="text" name="wishlist" placeholder="Wishlist" required></input>
           <button type="submit" name="submit" value="submit" id="wishlist">Submit</button>
         </form>
     </div>

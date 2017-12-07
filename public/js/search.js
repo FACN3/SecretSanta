@@ -1,6 +1,10 @@
 document.getElementById('submitButton').addEventListener('click', function() {
   var fullName = document.getElementById('submitInput').value.toLowerCase();
-  if (fullName != "") {
+  if (fullName === "" || fullName.split(' ').length < 2) {
+    var message = document.createElement('p');
+    message.textContent = "Please enter a full name."
+    document.getElementById('resDiv').appendChild(message);
+  } else {
     postSearch("/search", fullName, renderingSearchResult);
   }
 });
@@ -43,7 +47,8 @@ function renderingSearchResult(err, arr) {
         var donor = document.createElement('input');
         donor.type = 'text';
         donor.setAttribute('id', 'donor');
-        donor.placeholder = 'Your name';
+        donor.setAttribute('required', 'required');
+        donor.placeholder = 'Write your Full Name';
         document.getElementById('resDiv').appendChild(donor);
 
         var submit = document.createElement('button');
@@ -65,6 +70,10 @@ function renderingSearchResult(err, arr) {
             }
           }
           var fullName = document.getElementById('donor').value;
+
+          if (fullName.split(' ').length < 2) {
+
+          }
           var first_name = fullName.split(' ')[0].toLowerCase();
           var last_name = fullName.split(' ')[1].toLowerCase();
           var data = [first_name, last_name, resList];
