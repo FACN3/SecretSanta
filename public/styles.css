@@ -78,18 +78,21 @@ p {
 /* SEARCH */
 label {
   font-family: OCR A Std, monospace;
+  font-size: 30px;
 }
 
 .button--reserve {
-  align-self: center;
+  /*align-self: center;*/
 }
 
 .input--donor {
-  width: 85%;
+  /*width: 30%;*/
+  margin-top: 20px;
 }
 
 .checkbox--gifts {
   border-radius: 4px;
+  -webkit-transform: scale(2);
 }
 .body__search {
   background-color: rgb(77, 135, 122);
