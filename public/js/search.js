@@ -55,6 +55,7 @@ function renderingSearchResult(err, arr) {
       donor.placeholder = 'Write your Full Name';
       donor.classList.add('input--donor');
       donor.setAttribute('required', 'required');
+      donor.setAttribute('maxlength', '40');
       document.getElementById('results').appendChild(donor);
 
 
