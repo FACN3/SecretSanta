@@ -1,9 +1,10 @@
+/* INDEX */
+
 p {
   font-family: 'Inconsolata', monospace;
   font-size: 1.5rem;
 }
 
-/* INDEX */
 .body--index {
   background-color: rgb(77, 135, 122);
   text-align: center;
@@ -52,7 +53,12 @@ p {
 #search, #list {
   height: 3em;
   width: 10em;
+  font-family: 'Inconsolata', monospace;
   font-size: 0.7em;
+}
+
+#wishlist {
+  font-family: 'Inconsolata', monospace;
 }
 
 /* SEARCH */
@@ -77,6 +83,13 @@ label {
   text-align: center;
 }
 
+
+#submitButton {
+  font-family: 'Inconsolata', monospace;
+}
+
+
+
 /* GENERATE*/
 .body--generate {
   background-color: rgb(184, 73, 73);
@@ -89,6 +102,29 @@ label {
 }
 
 #first_name, #last_name {
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.8em;
   height: 3em;
   width: 15em;
+}
+
+.shopping_list {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.5em;
+  background-color: rgb(77, 135, 122);
+  border-radius: 1.5rem;
+  width: 40vw;
+  text-align: center;
+  margin: auto;
+}
+
+.shopping_list ul {
+  list-style-type: none;
+}
+
+#generate_button {
+  font-family: 'Inconsolata', monospace;
+  height: 3em;
+  width: 7em;
+  font-size: 0.8em;
 }
