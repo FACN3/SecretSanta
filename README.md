@@ -59,4 +59,10 @@ _____________________________
 ```
 The reservation table records every promise of a user who decided to buy gifts for his friends.
 
+## To View Our App
+
+* Clone this repository
+* Run ```npm install``` to install the dependencies
+* Run ```npm run dev``` to start nodemon on port 4444.
+
 

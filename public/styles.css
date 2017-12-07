@@ -5,6 +5,20 @@ p {
   font-size: 1.5rem;
 }
 
+.back_home {
+  margin: 10% 0 10% 0;
+}
+
+.back_home_btn {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Inconsolata', monospace;
+  border-radius: 0.3rem;
+  background-color: white;
+}
+
+/* INDEX */
+
 .body--index {
   background-color: rgb(77, 135, 122);
   text-align: center;

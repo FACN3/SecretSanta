@@ -22,9 +22,13 @@ document.getElementById('generate_button').addEventListener('click', function ()
   console.log('this is data', data);
   fetch('/generate', data, function (err, res) {
     if(err) {
-      console.log('there was an error', err);
-    } else {
-      console.log('THE response', res);
+      alert('Sorry, there was an error...');
+    } else if (res == "USER NOT FOUND" || res === "") {
+      var message = document.createElement('p');
+      message.textContent = "You don't seem to have planned to buy any gifts for your friends...";
+      document.getElementById('shopping_list').appendChild(message);
+    }
+    else {
       showShoppingList(res);
     }
   });
