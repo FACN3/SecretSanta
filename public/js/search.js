@@ -1,6 +1,10 @@
 document.getElementById('submitButton').addEventListener('click', function() {
   var fullName = document.getElementById('submitInput').value.toLowerCase();
-  if (fullName != "") {
+  if (fullName === "" || fullName.split(' ').length < 2) {
+    var message = document.createElement('p');
+    message.textContent = "Please enter a full name."
+    document.getElementById('resDiv').appendChild(message);
+  } else {
     postSearch("/search", fullName, renderingSearchResult);
   }
 });
@@ -44,12 +48,15 @@ function renderingSearchResult(err, arr) {
       // Otherwise, create the wishlist with an input form (for the name of the donor)
       // and a submit button.
     } else {
+
       var donor = document.createElement('input');
       donor.type = 'text';
       donor.setAttribute('id', 'donor');
-      donor.placeholder = 'Your name';
+      donor.placeholder = 'Write your Full Name';
       donor.classList.add('input--donor');
+      donor.setAttribute('required', 'required');
       document.getElementById('results').appendChild(donor);
+
 
       var submit = document.createElement('button');
       submit.textContent = "Submit";
@@ -69,11 +76,18 @@ function renderingSearchResult(err, arr) {
               resList.push(parseInt(inputs[i].name, 10));
             }
           }
+
         }
         var fullName = document.getElementById('donor').value;
         var first_name = fullName.split(' ')[0].toLowerCase();
         var last_name = fullName.split(' ')[1].toLowerCase();
         var data = [first_name, last_name, resList];
+
+          var fullName = document.getElementById('donor').value;
+          var first_name = fullName.split(' ')[0].toLowerCase();
+          var last_name = fullName.split(' ')[1].toLowerCase();
+          var data = [first_name, last_name, resList];
+
 
         postSearch('/reserve', data, function(err, res) {
           if (err) {

@@ -1,6 +1,20 @@
+/* INDEX */
+
 p {
   font-family: 'Inconsolata', monospace;
   font-size: 1.5rem;
+}
+
+.back_home {
+  margin: 10% 0 10% 0;
+}
+
+.back_home_btn {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Inconsolata', monospace;
+  border-radius: 0.3rem;
+  background-color: white;
 }
 
 /* INDEX */
@@ -53,15 +67,30 @@ p {
 #search, #list {
   height: 3em;
   width: 10em;
+  font-family: 'Inconsolata', monospace;
   font-size: 0.7em;
 }
 
-/* SEARCH */
-
-label {
-  display: block;
+#wishlist {
+  font-family: 'Inconsolata', monospace;
 }
 
+/* SEARCH */
+label {
+  font-family: OCR A Std, monospace;
+}
+
+.button--reserve {
+  align-self: center;
+}
+
+.input--donor {
+  width: 85%;
+}
+
+.checkbox--gifts {
+  border-radius: 4px;
+}
 .body__search {
   background-color: rgb(77, 135, 122);
   text-align: center;
@@ -92,6 +121,13 @@ label {
   padding-top: 10%;
 }
 
+
+#submitButton {
+  font-family: 'Inconsolata', monospace;
+}
+
+
+
 /* GENERATE*/
 
 .body--generate {
@@ -101,26 +137,34 @@ label {
 
 .generate__title {
   font-family: 'Mountains of Christmas', cursive;
-  font-size: 4.5em;
+  font-size: 4.51em;
 }
 
 #first_name, #last_name {
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.8em;
   height: 3em;
   width: 15em;
 }
 
-label {
-  font-family: OCR A Std, monospace;
+
+.shopping_list {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.5em;
+  background-color: rgb(77, 135, 122);
+  border-radius: 1.5rem;
+  width: 40vw;
+  text-align: center;
+  margin: auto;
 }
 
-.button--reserve {
-  align-self: center;
+.shopping_list ul {
+  list-style-type: none;
 }
 
-.input--donor {
-  width: 85%;
-}
-
-.checkbox--gifts {
-  border-radius: 4px;
+#generate_button {
+  font-family: 'Inconsolata', monospace;
+  height: 3em;
+  width: 7em;
+  font-size: 0.8em;
 }
